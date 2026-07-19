@@ -22,10 +22,7 @@ Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 
 python -m pip install --upgrade pip
 
-python -m pip install dbt-postgres
-
-python -m pip install dbt
-
+python -m pip install dbt-core==1.12.0 dbt-postgres==1.11.0
 
 check:
 
