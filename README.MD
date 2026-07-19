@@ -1,0 +1,14 @@
+making a quick thing
+
+
+setup docker server for local dev:
+    docker build -t my-postgres .
+
+    docker run -d \
+        --name postgres-db \
+        -p 5432:5432 \
+        -v postgres_data:/var/lib/postgresql/data \
+        my-postgres
+
+docker run -d --name postgres-db -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=password123 -e POSTGRES_DB=appdb -p 5432:5432 -v postgres_data:/var/lib/postgresql/data postgres:16
+
