@@ -33,3 +33,11 @@ dbt --version
 
 python -m dbt.cli.main init dbt_test
 
+
+$env:DBT_PROFILES_DIR=".\profiles"
+
+dbt:  
+
+dbt debug --profiles-dir profiles
+
+dbt run --profiles-dir profiles

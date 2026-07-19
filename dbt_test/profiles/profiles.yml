@@ -1,0 +1,13 @@
+dbt_test:
+  target: dev
+
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: admin
+      password: password123
+      dbname: appdb
+      schema: public
+      threads: 1
