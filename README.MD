@@ -38,3 +38,8 @@ dbt:
 dbt debug --profiles-dir profiles
 
 dbt run --profiles-dir profiles
+
+
+
+API
+uvicorn main:app --reload
