@@ -12,3 +12,21 @@ setup docker server for local dev:
 
 docker run -d --name postgres-db -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=password123 -e POSTGRES_DB=appdb -p 5432:5432 -v postgres_data:/var/lib/postgresql/data postgres:16
 
+Python:
+py install 3.12
+py -3.12 -m venv .venv
+
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+
+.venv\Scripts\Activate.ps1
+
+python -m pip install --upgrade pip
+
+python -m pip install dbt-postgres
+
+python -m pip install dbt
+
+
+check:
+
+dbt --version
