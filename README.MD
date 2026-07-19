@@ -30,3 +30,6 @@ python -m pip install dbt
 check:
 
 dbt --version
+
+python -m dbt.cli.main init dbt_test
+
