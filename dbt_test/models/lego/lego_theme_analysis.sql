@@ -1,3 +1,9 @@
+{{ config(
+    materialized='table'
+) }}
+
+
+
 SELECT
     ls."themeGroup",
     ls.subtheme,
