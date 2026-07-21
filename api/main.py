@@ -5,6 +5,7 @@ from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 
 import users as u
+import lego as l
 
 
 load_dotenv()
@@ -34,4 +35,10 @@ def health():
 def get_users():
     
     return u.get_users(engine)
+
+
+@app.get("/lego")
+def get_users():
+    
+    return l.get_lego_proportions(engine)
   
