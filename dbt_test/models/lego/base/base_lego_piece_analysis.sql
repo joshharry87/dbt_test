@@ -21,6 +21,9 @@ agerange_min,
 ,SUM(pieces) OVER (
     PARTITION BY year
 ) as year_pieces
+,SUM("US_retailPrice") OVER (
+    PARTITION BY year
+) as year_dollars
 ,SUM(pieces) OVER (
     PARTITION BY theme
 ) as theme_pieces
