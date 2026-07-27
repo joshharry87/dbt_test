@@ -1,7 +1,9 @@
 {{ config(
     materialized='incremental',
-    unique_key=['device_1', 'day']
+    unique_key=['device_id', 'minute'],
+    incremental_strategy='merge'
 ) }}
+
 
 WITH minute_readings AS (
 
