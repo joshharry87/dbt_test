@@ -1,0 +1,8 @@
+-- CREATE EXTENSION IF NOT EXISTS timescaledb;
+
+
+CREATE TABLE users_two (
+    id SERIAL PRIMARY KEY,
+    username TEXT NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

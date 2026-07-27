@@ -1,4 +1,4 @@
-FROM postgres:16
+FROM timescale/timescaledb:latest-pg16
 
 ENV POSTGRES_USER=admin
 ENV POSTGRES_PASSWORD=password123
